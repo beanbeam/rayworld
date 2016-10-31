@@ -27,10 +27,10 @@ are calculated by marching another ray from the surface of the terrain towards
 the sun, casting shadows if terrain is hit in the process.
 
 The shape of the terrain is generated using simplex noise, provided by the code at
-https://github.com/ashima/webgl-noise (see [LICENSE.txt](LICENSE.txt)). To calculate
-the terrain height at a given point, the noise function is sampled multiple times at
-different resolutions, and the results are summed together to create large, rolling
-hills with some smaller bumps and details.
+https://github.com/ashima/webgl-noise (see [NOISE_LICENSE.txt](NOISE_LICENSE.txt)).
+To calculate the terrain height at a given point, the noise function is sampled
+multiple times at different resolutions, and the results are summed together to
+create large, rolling hills with some smaller bumps and details.
 
 Color is selected based exclusively on terrain height except in border regions,
 where location on the plane is compared with a two dimensional sin function in order
