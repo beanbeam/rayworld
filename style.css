@@ -1,0 +1,119 @@
+body {
+  margin: 0;
+  overflow: hidden;
+}
+
+#main_canvas {
+  width:  100%;
+  height: 100%;
+  background-color: #888;
+}
+
+#control_panel {
+  position: absolute;
+  height: 38px;
+  left: 0;
+  bottom: 0;
+  right: 0;
+
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+
+  padding: 10px 20px;
+
+  background-color: rgba(0, 0, 0, 0.3);
+
+  transition: bottom 0.1s;
+}
+
+#control_panel.hidden {
+  bottom: -48px;
+}
+
+#control_panel .disclosure {
+  position: absolute;
+  left: 50%; bottom: 58px;
+  box-sizing: border-box;
+  width: 30px;
+  height: 10px;
+
+  margin-left: -15px;
+  padding-top: 4px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+
+  text-align: center;
+  color: #AAA;
+  background-color: rgba(0, 0, 0, 0.3);
+
+  transition: height 0.1s;
+}
+
+.arrow {
+  margin-left: 10px;
+  margin-top: 3px;
+  width: 0px;
+  height: 0px;
+  border-radius: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 6px solid #AAA;
+  transition: border-top-color 0.1s;
+}
+
+.hidden .arrow {
+  -webkit-transform: rotate(180deg);
+  -moz-transform:    rotate(180deg);
+  -ms-transform:     rotate(180deg);
+  -o-transform:      rotate(180deg);
+  transform:         rotate(180deg);
+}
+
+#control_panel:hover .arrow {
+  border-top-color: white;
+}
+
+#control_panel.hidden:hover .disclosure {
+  height: 15px;
+}
+
+.control {
+  display: inline-block;
+  height: 100%;
+}
+
+label {
+  display: block;
+  box-sizing: border-box;
+  margin-left: 5px;
+  margin-bottom: 2px;
+  max-width: 125px;
+  font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  font-size: 11pt;
+  color: white;
+}
+
+#resolution {
+  width: 125px;
+}
+
+#fps_counter {
+  font-size: 20pt;
+  display: inline-block;
+  height: 20pt;
+}
+
+#fps {
+  position: absolute;
+  right: 20px;
+  bottom: 50%;
+  margin-top: -12pt;
+  top: 50%;
+  height: 20pt;
+
+  font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  font-size: 12pt;
+  color: white;
+}
